@@ -1,0 +1,61 @@
+{
+  "name": "@huongda-group/sequelize-dialect-arango",
+  "version": "0.0.1",
+  "description": "Arango Connector for Sequelize, based on the arango npm package",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.mts",
+        "default": "./dist/index.mjs"
+      },
+      "require": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      }
+    }
+  },
+  "scripts": {
+    "build": "tsc && npx tsc-alias",
+    "setup": "git clone https://github.com/sequelize/sequelize.git",
+    "upgrade": "npm install -g npm-check-updates && ncu -u && npm install"
+  },
+  "files": [
+    "dist"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/huongda-group/sequelize-dialect-arango.git"
+  },
+  "keywords": [
+    "sequelize",
+    "arango",
+    "arangodb",
+    "database",
+    "javascript",
+    "nodejs",
+    "huongda",
+    "hdo",
+    "hdg"
+  ],
+  "author": "Hương Đá group",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/huongda-group/sequelize-dialect-arango/issues"
+  },
+  "homepage": "https://huongda.com",
+  "publishConfig": {
+    "access": "public"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.11",
+    "ts-node": "~10.9.2",
+    "tsc-alias": "~1.8.10",
+    "typescript": "~5.5.3"
+  },
+  "dependencies": {
+    "arangojs": "^8.8.1",
+    "tslib": "~2.6.3"
+  }
+}
